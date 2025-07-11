@@ -1,6 +1,12 @@
 const container = document.querySelector(".container");
 
-
+function getRandomRgb()
+{
+    const r = Math.floor(Math.random()*256);
+    const g = Math.floor(Math.random()*256);
+    const b = Math.floor(Math.random()*256);
+    return `rgb(${r},${g},${b}`;
+}
 
 function defaultGrid()
     {  
@@ -22,7 +28,7 @@ function defaultGrid()
                 {
                     column.addEventListener('mouseover', ()=>
                         {
-                            column.style.backgroundColor='white';
+                            column.style.backgroundColor= getRandomRgb();
                         }
                     )
                 }
