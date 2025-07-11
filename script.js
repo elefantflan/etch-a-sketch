@@ -17,7 +17,6 @@ function defaultGrid()
                 container.appendChild(rows);
             }
     }
-defaultGrid();
 const columns = document.querySelectorAll('.column');
 columns.forEach(column =>
         {
@@ -38,15 +37,29 @@ reset.addEventListener('click', ()=>
                         column.style.backgroundColor='black';
                     }
                 )
+            defaultGrid();
         }
 )
 
-function canvasGrid()
+function canvasGrid(input)
         {
-
+            for(i=1;i<=input;i++)
+            {
+                const rows = document.createElement('div');
+                rows.classList.add("row", "row-" +i);
+                    for(j=1;j<=input;j++)
+                    {
+                        const columns = document.createElement('div');
+                        columns.classList.add("column", "column-" +j);
+                        rows.appendChild(columns);
+                    }
+                container.appendChild(rows);
+            }
         }
 
 const canvas = document.querySelector('#canvas');
+
+const canvasbtn = 
 canvas.addEventListener('click', ()=>
         {
             const userInput = Number(prompt('Enter 16-100'))
@@ -58,12 +71,7 @@ canvas.addEventListener('click', ()=>
 
             if (userInput >=16 && userInput <=100)
                 {
-                    columns.forEach(column =>
-                            {
-                                column.style.backgroundColor='black';
-                            }
-                        )
-                    defaultGrid(userInput, userInput);
+                    canvasGrid(userInput);
                 }
             else
                 {
