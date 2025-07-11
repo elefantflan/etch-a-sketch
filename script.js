@@ -47,8 +47,16 @@ function canvasGrid(input)
             )
         }
 
-
-
+function removeGrid()
+        {
+            const rows = document.querySelectorAll('.row')
+            const columns = document.querySelectorAll('.column')
+            rows.forEach(row=>
+                {
+                    container.removeChild(row);
+                }
+                )
+        }
 
 const canvas = document.querySelector('#canvas');
 
@@ -64,7 +72,7 @@ canvas.addEventListener('click', ()=>
 
             if (userInput >=16 && userInput <=100)
                 {
-
+                    removeGrid();
                     canvasGrid(userInput);
                 }
             else
