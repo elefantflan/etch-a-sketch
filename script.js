@@ -17,17 +17,6 @@ function defaultGrid()
                 container.appendChild(rows);
             }
     }
-const columns = document.querySelectorAll('.column');
-columns.forEach(column =>
-        {
-            column.addEventListener('mouseover', ()=>
-                {
-                    column.style.backgroundColor='white';
-                }
-            )
-        }
-    )
-
 
 const reset = document.querySelector('#reset');
 reset.addEventListener('click', ()=>
@@ -55,7 +44,21 @@ function canvasGrid(input)
                     }
                 container.appendChild(rows);
             }
+
+            const columns = document.querySelectorAll('.column');
+            columns.forEach(column =>
+                {
+                    column.addEventListener('mouseover', ()=>
+                        {
+                            column.style.backgroundColor='white';
+                        }
+                    )
+                }
+            )
         }
+
+
+
 
 const canvas = document.querySelector('#canvas');
 
@@ -71,6 +74,7 @@ canvas.addEventListener('click', ()=>
 
             if (userInput >=16 && userInput <=100)
                 {
+
                     canvasGrid(userInput);
                 }
             else

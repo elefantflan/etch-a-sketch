@@ -5,6 +5,7 @@
         width: 500px;
         height: 500px;
         border: 1px solid black;
+        background-color:black;
     }
 
 
@@ -18,5 +19,4 @@
     {
         display:flex;
         flex:auto;
-        background-color:black;
     }
