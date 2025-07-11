@@ -2,7 +2,7 @@ const container = document.querySelector(".container");
 
 
 
-function defaultRow(rows)
+function defaultRow(rows, columns)
     {  
         for(i=1;i<=16;i++)
             {
@@ -12,11 +12,20 @@ function defaultRow(rows)
                     {
                         columns = document.createElement('div');
                         columns.classList.add("column", "column-" +j);
-                        console.log(columns);
                         rows.appendChild(columns);
                     }
                 container.appendChild(rows);
             }
-
     }
 defaultRow();
+
+const columns = document.querySelectorAll('.column');
+columns.forEach(column =>
+        {
+            column.addEventListener('mouseover', ()=>
+                {
+                    column.style.backgroundColor='white';
+                }
+            )
+        }
+    )

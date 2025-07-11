@@ -18,12 +18,5 @@
     {
         display:flex;
         flex:auto;
-
         background-color:black;
-        transition: background-color 0.5s;
-    }
-
-.column:hover 
-    {
-        background-color: white;
     }
