@@ -16,8 +16,19 @@ function defaultGrid()
                     }
                 container.appendChild(rows);
             }
+            
+            const columns = document.querySelectorAll('.column');
+            columns.forEach(column =>
+                {
+                    column.addEventListener('mouseover', ()=>
+                        {
+                            column.style.backgroundColor='white';
+                        }
+                    )
+                }
+            )
     }
-
+defaultGrid();
 
 
 function canvasGrid(input)
