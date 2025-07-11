@@ -29,3 +29,15 @@ columns.forEach(column =>
             )
         }
     )
+
+
+const reset = document.querySelector('#reset');
+reset.addEventListener('click', ()=>
+        {
+            columns.forEach(column =>
+                    {
+                        column.style.backgroundColor='black';
+                    }
+                )
+        }
+)
