@@ -18,17 +18,7 @@ function defaultGrid()
             }
     }
 
-const reset = document.querySelector('#reset');
-reset.addEventListener('click', ()=>
-        {
-            columns.forEach(column =>
-                    {
-                        column.style.backgroundColor='black';
-                    }
-                )
-            defaultGrid();
-        }
-)
+
 
 function canvasGrid(input)
         {
@@ -82,5 +72,17 @@ canvas.addEventListener('click', ()=>
                     alert('Try Again')
                 }
                 
+        }
+)
+
+const reset = document.querySelector('#reset');
+reset.addEventListener('click', ()=>
+        {
+            const columns = document.querySelectorAll('.column')
+            columns.forEach(column =>
+                    {
+                        column.style.backgroundColor='black';
+                    }
+                )
         }
 )
